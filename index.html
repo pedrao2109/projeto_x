@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Finanças</title>
+</head>
+<body>
+    <main class="form-signin">
+  <form name="formLogin" id="formLogin" class="formLogin" onsubmit="event.preventDefault();">
+    <h1 class="h3 mb-3 fw-normal">Controle de Finanças</h1>
+        <div class="form-floating">
+      <input type="number" class="form-control" id="gasto_gasolina" placeholder="Gasolina">
+    </div>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="gasto_cartao" placeholder="Cartão">
+    </div>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="ganhos_totais" placeholder="ganhos totais">
+    </div>
+<button onclick="somar()">
+    Somar lucros
+</button>
+<p id="resultado">
+    resultado:
+</p>
+
+<script type="text/javascript">
+    function somar(){
+        let num1 = parseInt(document.getElementById("gasto_gasolina").value)
+        let num2 = parseInt(document.getElementById("gasto_cartao").value)
+        let num3 = parseInt(document.getElementById("ganhos_totais").value)
+        
+
+        let soma = num3 - num1 - num2
+
+    document.getElementById("resultado").textContent = "resultado: " + soma
+    }
+</script>
+
+</body>
+</html>
